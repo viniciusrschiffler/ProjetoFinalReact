@@ -1,0 +1,23 @@
+#comprar {
+  width: 63vw;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.tabelao {
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  display: flex;
+}
+#add {
+  position: absolute;
+  top: 40%;
+  width: 130vw;
+  height: 10vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

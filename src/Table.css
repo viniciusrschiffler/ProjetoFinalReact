@@ -1,0 +1,25 @@
+html {
+  height: 100%;
+}
+body {
+  color: white;
+  background: linear-gradient(#0c061d 26.04%, #230871 57.81%, #440753 100%);
+}
+#tabela {
+  min-height: 300px;
+  overflow: auto;
+  padding: 30px;
+  margin: 30px auto;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+  width: 80vw;
+}
+
+.tab {
+  padding: 30px;
+}
+
+.tab1 {
+  padding: 30px;
+  text-align: center;
+}
