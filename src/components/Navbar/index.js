@@ -29,7 +29,7 @@ function Navbar() {
             </LogoContainer>
 
             <LinksContainer>
-                <Link to="/">Inicio</Link>
+                <Link to="/" >Inicio</Link>
                 
                 <GenresContainer> 
                     <Link to="/">Gêneros <FiChevronDown style={arrowDown} /></Link>
