@@ -1,5 +1,5 @@
 import { BoxLogin, Container } from "./styles";
-import Btn from "../../components/Btn/Btn";
+import Btn from "../../components/LoginButton";
 
 import Logo from "../../assets/Logo.png";
 

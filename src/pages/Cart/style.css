@@ -1,0 +1,29 @@
+#container {
+
+  color: white;
+  background: linear-gradient(#0c061d 26.04%, #230871 57.81%, #440753 100%);
+
+  width: 100vw;
+  height: 100vh;
+}
+
+.tabelao {
+  width: 100vw;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+#buttonsContainer {
+  width: 100vw;
+  height: 10vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 10vh;
+}
