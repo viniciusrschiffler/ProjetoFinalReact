@@ -610,15 +610,140 @@ import styled from "styled-components";
             top: 25.5vh;
         }
         @media (max-width: 495px) {
-            top: 25vh;
+            top: 28vh;
             font-size: 90%;
             padding: 120px 100px 0px 100px;
         }
         @media (max-width: 400px) {
-            top: 23vh;
+            top: 28vh;
             padding: 120px 75px 0px 75px;
         }
         @media (max-width: 340px) {
             padding: 110px 60px 0px 60px;
         }
     `;
+
+export const ButtonADM = styled.button `
+    position: relative;
+    object-fit: cover;
+    left: 7.4vw;
+    top: 70vh;
+    border-radius: 25px;
+    width: 22.2vw;
+    height: 53px;
+    background-color: #0be646;
+    border: none;
+    transition: 0.1s;
+
+@keyframes circleGrow {
+        0% {
+            transform: scale(.95);
+            opacity: 0.7;
+            } 
+        50% {
+            opacity: 0.8;
+            }
+        100% {
+            transform: scale(1);
+            opacity: 1;
+            }
+        }
+
+        &:focus:not(:active){
+        animation: circleGrow 0.2s linear;
+        }
+
+        &:hover {
+            transform: scale(1.09);
+            cursor: pointer;
+            
+        }
+       @media(max-width: 1000px) {
+        left: 5.6vw;
+        width: 24vw;
+       }
+       @media(max-width: 1000px) {
+        left: 5vw;
+        width: 25.5vw;
+       }
+       @media(max-width: 650px) {
+        position:absolute;
+        top: 22.5vh;
+        left: 19.3vw;
+        width: 8vw;
+        height: 33vh;
+       }
+       @media (max-width: 550px) {
+        left: 14.2vw;
+        width: 8.6vw;
+        top: 21.5vh;
+       }
+       @media (max-width: 510px) {
+        left: 12vw;
+        width: 9vw;
+       }
+       @media(max-width: 495px) {
+           top: 18.5vh;
+           left: 10.5vw;
+       }
+       @media(max-width: 450px) {
+            top: 55vh;
+            left: 21vw;
+            width: 58vw;
+            height: 8vh;
+       }
+       @media(max-width:400px) {
+           width: 63vw;
+           left: 18vw;
+       }
+       @media(max-width:400px) {
+           width: 66vw;
+       }
+       @media(max-width:375px) {
+           width: 68vw;
+       }
+       @media(max-width:360px) {
+           width: 70vw;
+           border-radius: 12px;
+       }
+       @media(max-width:355px) {
+        width: 71.5vw;
+        left: 13.5vw;
+       }
+       @media(max-width: 335px) {
+           width: 75vw;
+       }
+       @media(max-width: 335px) {
+           width: 79vw;
+       }
+`;
+
+
+export const ImgAdicionar = styled.img`
+    object-fit: cover;
+    height: 62%;
+
+    @media (max-width: 650px) {
+        height: 21.5%;
+        width: auto;
+    }
+    @media(max-width: 495px) {
+        height: 22.8%;
+        width: 90%;
+    }
+    @media(max-width: 485px) {
+        width: 22% 22%;
+    }
+    @media(max-width: 450px) {
+        width: auto;
+        height: 75%;
+    }
+    @media(max-width: 450px) {
+        width: auto;
+        height: 60%;
+    }
+    @media(max-width: 355px) {
+        width: 13%;
+        height: 50%;
+    }
+`;

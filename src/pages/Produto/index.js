@@ -1,5 +1,6 @@
 import imgCompra from "../../img/carrinho.png";
 import imgAluguel from "../../img/alugar.png";
+import imgAdicionar from "../../img/adicionar.svg";
 import {
     Title,
     Background,
@@ -11,7 +12,9 @@ import {
     ImgAluguel,
     Button2,
     Rating,
-    Description
+    Description,
+    ButtonADM,
+    ImgAdicionar
 } from "./styles";
 
 function Produto() {
@@ -25,8 +28,9 @@ function Produto() {
                 <Foto src="https://www.saudaveleforte.com.br/wp-content/uploads/2019/11/guarana00-1.jpg" />
 
                 <div>
+
                     <Title>Pó de Guaraná</Title>
-            
+                    
                 </div>
 
                 <div>
@@ -47,6 +51,10 @@ function Produto() {
                             R$ 1,99
                         </div>
                     </Button2>
+                    
+                    <ButtonADM>
+                        <ImgAdicionar src={imgAdicionar} />
+                    </ButtonADM>
                     
                 </div>
                     <Rating>
