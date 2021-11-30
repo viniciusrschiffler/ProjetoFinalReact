@@ -1,13 +1,12 @@
-import GlobalStyle from './styles/global'
-
-import Navbar from './components/Navbar'
+import Produto from "./pages/Produto";
+import GlobalStyle from "./styles/global";
 
 function App() {
   return (
-    <>
-      <Navbar />
-      <GlobalStyle />
-    </>
+    <div className="App">
+     <Produto />
+     <GlobalStyle />
+    </div>
   );
 }
 
