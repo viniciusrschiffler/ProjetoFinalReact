@@ -9,6 +9,18 @@ export const Container = styled.div`
         padding: 10px;
     `
 
+export const Edit = styled.button`
+        //width: 100%;
+        //height: 100px;
+        border-radius: 5px;
+        color: white;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 10px;
+        background-color:  #440753;
+    `
+
 export const Name = styled.h1`
     width: 100%;
     text-align: center;

@@ -2,7 +2,8 @@ import{
     Container,
     Name,
     Username,
-    Description
+    Description,
+    Edit
 } from './styles';
 
 /*function retornarDadosGit() {
@@ -39,6 +40,7 @@ const UserDetails = props =>(
         <Name>{props.name}</Name>
         <Username>{props.login}</Username>
         <Description>{props?.bio}</Description>
+        <Edit>{props.editar}</Edit>
     </Container>
 
 );
