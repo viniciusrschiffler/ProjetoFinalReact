@@ -5,6 +5,7 @@ import UserPicture from '../components/userPicture';
 import UserDetails from '../components/userDetails';
 import Table from '../components/table/index';
 
+
 export default function Home() {
     return (
         <Container>
