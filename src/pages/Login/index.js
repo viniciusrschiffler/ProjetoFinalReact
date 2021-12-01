@@ -37,7 +37,8 @@ function Login() {
                             aria-describedby="basic-addon1"
                         />
                     </div>
-                    <Btn></Btn>
+                    <Btn label="Acessar" url="/products"></Btn>
+                    <Btn label="Cadastrar" url="/cliente/cadastro"></Btn>
                 </div>
             </BoxLogin>
         </Container>
