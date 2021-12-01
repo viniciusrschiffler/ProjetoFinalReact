@@ -3,6 +3,7 @@ import Header from '../components/header';
 import UserContainer from '../components/userContainer';
 import UserPicture from '../components/userPicture';
 import UserDetails from '../components/userDetails';
+import Table from '../components/table/index';
 
 export default function Home() {
     return (
@@ -11,6 +12,7 @@ export default function Home() {
             <UserContainer>
                 <UserPicture url="https://avatars.githubusercontent.com/u/89466535?v=4" alternativeText="image" />
                 <UserDetails name="Ana Clara" login="#anaclarabull" bio="Minha Bio..." />
+                <Table />
             </UserContainer>
         </Container>
     );
