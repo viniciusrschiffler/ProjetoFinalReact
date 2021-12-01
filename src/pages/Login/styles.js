@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
 
   display: flex;
@@ -15,17 +15,11 @@ export const Container = styled.div`
   background-repeat: no-repeat;
   -webkit-font-smoothing: antialiased;
 
-  margin: 0 auto;
+  margin: 5 auto;
   padding: 40px 20px;
   font-size: 16px;
 `;
 
 export const Title = styled.div`
   margin-left: 10px;
-`;
-
-export const BoxLogin = styled.div`
-  background-color: black;
-  padding: 30px;
-  border-radius: 10px;
 `;

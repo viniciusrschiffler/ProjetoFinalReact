@@ -22,7 +22,15 @@ export default createGlobalStyle `
 
     .content-box {
         width: 50vw;
-        min-height: 80vh;
+        min-height: 40vh;
         background-color: #000;
+    }
+
+    .content-box-login {
+        width: 25vw;
+    }
+    
+    .borda-arredondada {
+        border-radius: .5rem;
     }
 `;

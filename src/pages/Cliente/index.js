@@ -105,12 +105,14 @@ function CadastroCliente() {
               </FloatingLabel>
             </Col>
             <Col md>
-              <FloatingLabel controlId="senhaUsuario" label="Senha" className="mb-3">
+              <FloatingLabel controlId="senhaUsuario" label="Senha" className="mb-5">
                 <Form.Control type="password" id="senhaUsuario" placeholder=" " />
               </FloatingLabel>
             </Col>
           </Row>
           <Row>
+            <Col md={6}>
+            </Col>
             <Col md={6}>
               <Btn label="Salvar" url="/products"></Btn>
             </Col>
