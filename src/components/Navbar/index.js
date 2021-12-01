@@ -32,7 +32,7 @@ function Navbar() {
                 <Link to="/" >Inicio</Link>
                 
                 <GenresContainer> 
-                    <Link to="/">Gêneros <FiChevronDown style={arrowDown} /></Link>
+                    <Link id="GenresLink" to="/">Gêneros <FiChevronDown style={arrowDown} /></Link>
 
                     <HiddenItemsContainer id="genres-hidden-items">
                         <HiddenItems to="/">Ação</HiddenItems>
