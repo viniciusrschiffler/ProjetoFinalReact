@@ -1,28 +1,24 @@
-import React from 'react'
-import Table from './Table'
-import './Table.css'
-import Button from './components/Button'
-import './components/Button/comprar.css'
-import Nome from './components/Nome'
-//import { minuscircleo } from 'react-icons/cg'
+import GlobalStyle from "./styles/global";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+import Login from './pages/Login';
+import Products from './pages/Produto';
+import Navbar from "./components/Navbar";
+import Cart from "./pages/Cart";
 
 function App() {
-
-  const data = [
-    { id: 1, Filme: 'Titanic', Preco: 'R$29,99', Tipo: 'Compra' },
-    { id: 2, Filme: 'Miranha', Preco: 'R$12,99', Tipo: 'Aluguel' },
-    { id: 3, Filme: 'O nevoeiro', Preco: 'R$22,99', Tipo: 'Aluguel' }
-  ]
   return (
-    <>
-      <div className="tabelao"><Table data={data} /></div>
-      <div id="comprar"><Button>Comprar</Button></div>
-      <div id="add"><Button>Comprar Mais</Button></div>
-    </>
-  )
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/products" element={<Products />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/nav" element={<Navbar />} />
+      </Routes>
+
+      <GlobalStyle />
+    </BrowserRouter>
+  );
 }
 
-
-
-export default App
+export default App;
