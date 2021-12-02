@@ -1,34 +1,67 @@
 import React from 'react'
-
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
 import './style.css'
 
 import Table from '../../components/Table'
-import Button from '../../components/CartButton'
+import Btn from "../../components/LoginButton";
+import { Row, Col } from "react-bootstrap";
+import Button from '@restart/ui/esm/Button'
+import { Link } from 'react-router-dom'
+
 
 
 function Cart() {
-
+  const MySwal = withReactContent(Swal)
   const data = [
-    { id: 1, Filme: 'Titanic', Preco: 'R$29,99', Tipo: 'Compra' },
-    { id: 2, Filme: 'Miranha', Preco: 'R$12,99', Tipo: 'Aluguel' },
-    { id: 3, Filme: 'O nevoeiro', Preco: 'R$22,99', Tipo: 'Aluguel' }
-  ]
-  return (
-    <div id="container">
 
+    { id: 1, Filme: 'Titanic', Preço: 'R$29,99', Tipo: 'Compra' },
+    { id: 2, Filme: 'Miranha', Preço: 'R$12,99', Tipo: 'Aluguel' },
+    { id: 3, Filme: 'O nevoeiro', Preço: 'R$22,99', Tipo: 'Aluguel'}
+  ]
+
+  // const data = localStorage.getItem('cart')
+
+  function alert() {
+    MySwal.fire({
+      title: <p>compra efetuada com SUCESSO!!</p>,
+      footer: 'Copyright grupo 06',
+    })
+  }
+
+  return (
+
+    <div id="container">
+      <div id="escritos">
+        <div>
+          <h2 id="limpar">
+            <Link to='/products' color='#fff'>limpar</Link>
+          </h2>
+        </div>
+
+        <div id="title">
+          <h1>Bem vindo Paulo!</h1>
+        </div>
+
+      </div>
       <div className="tabelao">
         <Table data={data} />
       </div>
 
-      <div id="buttonsContainer">
-        <Button>Comprar</Button>
-        <Button background="#114696" >Comprar Mais</Button>
+      <div className="buttonsContainer">
+        <div>
+          <Button className="Comprar" onClick={alert}>Comprar</Button>
+        </div>
+        <div>
+          <Row>
+            <Col md>
+              <Btn idButton='comp' input type='button' title="Comprar Mais" url="/home">Comprar Mais</Btn>
+            </Col>
+          </Row>
+        </div>
       </div>
-
     </div>
   )
 }
-
-
 
 export default Cart

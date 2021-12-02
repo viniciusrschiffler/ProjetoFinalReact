@@ -1,23 +1,24 @@
 #container {
-
-  color: white;
+  color: rgb(230, 230, 230);
   background: linear-gradient(#0c061d 26.04%, #230871 57.81%, #440753 100%);
 
   width: 100vw;
   height: 100vh;
+  object-fit: cover;
 }
 
 .tabelao {
+  position: absolute;
   width: 100vw;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  bottom: 50%;
 }
 
-
-#buttonsContainer {
+.buttonsContainer {
   width: 100vw;
   height: 10vh;
 
@@ -25,5 +26,73 @@
   justify-content: center;
   align-items: center;
 
-  margin-top: 10vh;
+  margin-top: 50vh;
+}
+#limpar {
+  text-decoration: none;
+  position: absolute;
+  padding-left: 94%;
+  bottom: 93%;
+  cursor: pointer;
+  color: rgb(221, 0, 0);
+}
+.Comprar {
+  background-color: rgb(16, 194, 0);
+  height: 66px;
+  width: 120px;
+  left: 20px;
+  border-radius: 12px;
+  font-family: "Trebuchet MS";
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 25px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #f5f1f1;
+  background: -webkit-linear-gradient(bottom, #e0e0e0, #f9f9f9 70%);
+  background: -ms-linear-gradient(bottom, #e0e0e0, #f9f9f9 70%);
+  background: linear-gradient(bottom, #e0e0e0, #f9f9f9 70%);
+  border: 1px solid #ccccce;
+  text-shadow: 1px 1px 0 rgb(0, 0, 0);
+  cursor: pointer;
+}
+#comp {
+  margin-left: 20vw;
+  background: -webkit-linear-gradient(bottom, #e0e0e0, #f9f9f9 70%);
+  background: -ms-linear-gradient(bottom, #e0e0e0, #f9f9f9 70%);
+  background: linear-gradient(bottom, #e0e0e0, #f9f9f9 70%);
+  border: 1px solid #ccccce;
+  border-radius: 12px;
+  box-shadow: 0 3px 0 rgba(0, 0, 0, 0.3), 0 2px 7px rgba(0, 0, 0, 0.2);
+  color: #616165;
+  display: block;
+  font-family: "Trebuchet MS";
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 25px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 0 rgb(0, 0, 0);
+  padding: 5px 15px;
+  position: relative;
+  width: 115px;
+}
+
+#escritos {
+  color: rgb(167, 167, 167);
+  text-align: center;
+  font-size: 80%;
+  padding: 20px;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  @media (max-width: 1000px) {
+    position: relative;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    top: 7.5vh;
+  }
 }
