@@ -8,6 +8,7 @@ import Navbar from "./components/Navbar";
 import Cart from "./pages/Cart";
 import MovieRegistration from "./pages/MovieRegistration";
 import CadastroCliente from "./pages/Cliente";
+import Home from "./pages/Home"
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/nav" element={<Navbar />} />
         <Route path="/movie-registration" element={<MovieRegistration />} />
         <Route path="/cliente/cadastro" element={<CadastroCliente />} />
+        <Route path="/home" element={<Home/>} />
       </Routes>
 
       <GlobalStyle />
