@@ -1,6 +1,6 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from 'styled-components';
 
-export default createGlobalStyle`
+export default createGlobalStyle `
     * {
         margin: 0;
         padding: 0;
@@ -12,5 +12,25 @@ export default createGlobalStyle`
     body {
         overflow-x: hidden;
         /* -webkit-font-smoothing: antialiased; */
+    }
+
+    .titulo {
+        color: #fff;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+    }
+
+    .content-box {
+        width: 50vw;
+        min-height: 40vh;
+        background-color: #000;
+    }
+
+    .content-box-login {
+        width: 25vw;
+    }
+    
+    .borda-arredondada {
+        border-radius: .5rem;
     }
 `;
