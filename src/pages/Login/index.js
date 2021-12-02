@@ -5,19 +5,21 @@ import Btn from "../../components/LoginButton";
 import Logo from "../../assets/Logo.png";
 
 function Login() {
+
+ function handleSubmit() {
+   let userName=document.getElementById("nomeUsuario").value;
+   let password=document.getElementById("senha").value;
+  }
   return (
     <Container>
-      <img src={Logo} alt="Fifi Filmes" class="img-fluid mb-5" />
+    
+      <img src={Logo} alt="Fifi Filmes" className="img-fluid mb-5" />
       <Card className="content-box content-box-login borda-arredondada">
         <Card.Body>
           <h2 className="mb-3 titulo">Digite seu nome de usuário</h2>
           <Row>
             <Col md>
-              <FloatingLabel
-                controlId="nomeUsuario"
-                label="Usuário"
-                className="mb-3"
-              >
+              <FloatingLabel controlId="nomeUsuario" label="Usuário" className="mb-3" >
                 <Form.Control type="text" id="nomeUsuario" placeholder=" " />
               </FloatingLabel>
             </Col>
@@ -32,10 +34,10 @@ function Login() {
           </Row>
           <Row>
             <Col md>
-              <Btn label="Acessar" url="/products" className="mb-3"></Btn>
+              <Btn title="Acessar" url="/" className="mb-3" handleFunction={handleSubmit} ></Btn>
             </Col>
             <Col md>
-              <Btn label="Cadastrar" url="/cliente/cadastro"></Btn>
+              <Btn title="Cadastrar" url="/cliente/cadastro"></Btn>
             </Col>
           </Row>
         </Card.Body>

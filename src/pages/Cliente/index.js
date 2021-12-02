@@ -114,7 +114,7 @@ function CadastroCliente() {
             <Col md={6}>
             </Col>
             <Col md={6}>
-              <Btn label="Salvar" url="/products"></Btn>
+              <Btn title="Salvar" url="/products"></Btn>
             </Col>
           </Row>
         </Card.Body>
