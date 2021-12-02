@@ -4,8 +4,7 @@ import UserContainer from '../components/userContainer';
 import UserPicture from '../components/userPicture';
 import UserDetails from '../components/userDetails';
 import Table from '../components/table/index';
-import EditarPerfil from '../pages/Editar';
-import EditarInfo from '../pages/Editar'
+import Edit from '../components/edit'
 
 
 export default function Home() {
@@ -16,9 +15,8 @@ export default function Home() {
                 <UserPicture url="https://avatars.githubusercontent.com/u/89466535?v=4" alternativeText="image" />
                 <UserDetails name="Ana Clara" login="#anaclarabull" bio="Minha Bio..." />
                 <Table />
+                <Edit />
             </UserContainer>
-            <EditarPerfil />
-            <EditarInfo />
         </Container>
                         
         

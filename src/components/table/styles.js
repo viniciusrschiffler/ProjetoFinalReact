@@ -6,9 +6,12 @@ export const TableBoots = styled.section`
         align-items: center;
         flex-direction: column;
         padding: 10px;
+        position: relative;
+        top: 10%;
     `
-export const Info = styled.section`
+export const Info = styled.td`
         height: 100px;
         align-items: center;
         flex-direction: column;
+        
     `
