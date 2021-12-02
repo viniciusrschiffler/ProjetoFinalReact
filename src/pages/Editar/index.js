@@ -1,9 +1,15 @@
 import React from 'react';
 
-function Editar (){
-    return (
-        <h1>Pagina inicial</h1>
-    );
-};
+import {
+    EditarPerfil,
+    EditarInfo,
+
+} from './styles';
+
+const Editar = () => (
+    <EditarPerfil>
+        <EditarInfo>Seu Perfil</EditarInfo>
+    </EditarPerfil>
+);
 
 export default Editar;
