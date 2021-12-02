@@ -10,7 +10,6 @@ import styled from "styled-components";
         position: relative;
         color: white;
         font-size: 260%;
-        //padding-top: 10vw;
         text-align: center;
         top: 20vh;
         text-decoration: none;
@@ -229,6 +228,7 @@ import styled from "styled-components";
             opacity: 1;
             }
         }
+
         
         &:focus:not(:active){
         animation: circleGrow 0.2s linear;
@@ -634,6 +634,7 @@ export const ButtonADM = styled.button `
     background-color: #0be646;
     border: none;
     transition: 0.1s;
+    display: none;
 
 @keyframes circleGrow {
         0% {
@@ -746,4 +747,108 @@ export const ImgAdicionar = styled.img`
         width: 13%;
         height: 50%;
     }
+`;
+
+export const Circle = styled.div`
+
+    display: block;
+    left: 44.5vw;
+    top: 36vh;
+
+    z-index: 4;
+
+    position: absolute;
+    border: 16px solid #bdc3c7;
+    width: 120px;
+    height: 120px;
+    border-top-color: #1abc9c;
+    border-bottom-color: #3498db;
+    border-radius: 50%;
+    animation: coloredspin 5s linear infinite; 
+
+
+    
+    @media(max-width: 1050px) {
+        left: 43vw;
+    }
+    @media(max-width: 900px) {
+        left: 42.5vw;
+    }
+    @media(max-width: 850px) {
+        left: 41.5vw;
+    }
+    @media(max-width: 750px) {
+        left: 40vw;
+    }
+    @media(max-width: 675px) {
+        left: 39vw;
+    }
+    @media(max-width: 600px) {
+        left: 37.5vw;
+    }
+    @media(max-width: 535px) {
+        left: 36vw;
+    }
+    @media(max-width: 450px) {
+        left: 34vw;
+    }
+    @media(max-width: 390px) {
+        left: 31vw;
+    }
+    @media(max-width: 350px) {
+        left: 29.5vw;
+    }
+
+    @keyframes coloredspin {
+  0%{
+    transform: rotate(0deg) scale(1);
+    border-top-color: #7b0e96;
+    border-bottom-color: #7b0e96;
+    border-left-color: #3509b5;
+    border-right-color: #3509b5;
+
+  }
+  12% {
+    transform: rotate(90deg) scale(1.1);
+  }
+  25% {
+    transform: rotate(180deg) scale(1.2);
+    border-top-color: #3509b5;
+    border-bottom-color: #3509b5;
+    border-left-color: #2f1b69;
+    border-right-color: #2f1b69;
+  }
+  37% {
+      transform: rotate(270deg) scale(1.3)
+  }
+  50% {
+    transform: rotate(360deg) scale(1.4);
+    border-top-color: #2f1b69;
+    border-bottom-color: #2f1b69;
+    border-left-color: #3509b5;
+    border-right-color: #3509b5;
+  }
+  62%{
+      transform: rotate(450deg) scale(1.3)
+  }
+  75% {
+    transform: rotate(540deg) scale(1.2);
+    border-top-color: #3509b5;
+    border-bottom-color: #3509b5;
+    border-left-color: #7b0e96;
+    border-right-color: #7b0e96;
+  }
+  87% {
+    transform: rotate(630deg) scale(1.1)
+  }
+  100%{
+    transform: rotate(720deg) scale(1);
+    border-top-color: #7b0e96;
+    border-bottom-color: #7b0e96;
+    border-left-color: #3509b5;
+    border-right-color: #3509b5;
+  }
+}
+
+
 `;
