@@ -1,0 +1,261 @@
+h2{
+    margin: 10px 20px;
+    font-size: 35px;
+}
+
+
+.listas{
+    margin-top: -130px;
+    margin-bottom: 150px;
+}
+
+.movieRow--listarea{
+    overflow-x: hidden;
+    padding-left: 30px;
+}
+
+.movieRow--list{
+    transition: all ease 0.5s;
+}
+
+.movierow--item{
+    display: inline-block;
+    width: 150px;
+    cursor: pointer;
+}
+
+.movierow--item img{
+    width: 100%;
+    transform: scale(0.9);
+    transition: all ease 0.2s;
+}
+
+.movierow--item img:hover{
+    transform: scale(1);
+}
+
+
+.destaque{
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    
+}
+
+.destaque--vertical{
+    width: inherit;
+    height: inherit;
+    background: linear-gradient(to top, #13092e 10%, transparent 90%);
+}
+
+.destaque--horizontal{
+    width: inherit;
+    height: inherit;
+    background: linear-gradient(to right, #0C061D 30%, transparent 70%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 30px;
+    padding-bottom: 150px;
+    padding-top: 80px;
+}
+
+.destaque--nome{
+    font-size: 60px;
+    font-weight: bold;
+    
+}
+
+.destaque--info{
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 15px;
+    
+}
+
+.destaque--points{
+    display: inline-block;
+    color: #46d369;
+    margin-right: 15px;
+}
+
+.destaque--ano{
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.destaque--temporadas{
+    display: inline-block;
+}
+
+.destaque--descricao{
+    margin-top: 15px;
+    color: rgb(179, 179, 179);
+    max-width: 40%;
+}
+
+.btn--saibamais{
+    display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+    padding: 13px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    background: linear-gradient(273.41deg, #4A14E4 0%, #900AB1 100%);
+    color: white;
+    opacity: 1;
+    transition: all ease 0.2s;
+    cursor: pointer;
+    
+}
+
+.btn--saibamais:hover{
+    opacity: 0.7;
+
+}
+
+.destaque--genres{
+    margin-top: 15px;
+    font-size: 18px;
+    color:rgb(179, 179, 179); 
+}
+
+
+.movierow--left img{
+    transform: rotate(180deg);
+
+}
+
+.movierow--left,
+.movierow--rigth{
+    position: absolute;
+    width: 40px;
+    height: 224.1px;
+    background-color: rgba(0, 0, 0, 0.336);
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    cursor: pointer;
+    opacity: 0;
+    transition: all ease 0.5s;
+}
+
+.movierow--left{
+    left: 0;
+}
+
+.movierow--rigth{
+    right: 0;
+}
+ .listas:hover .movierow--left,
+ .listas:hover .movierow--rigth{
+     opacity: 1;
+ }
+
+footer{
+    text-align: center;
+    background-color: #0C061D;
+    height: 30vh;
+    width: 100vw;
+    
+}
+
+.container{
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+   
+}
+
+.container ul {
+    list-style: none;
+}
+
+.container img{
+    width: 45px;
+}
+
+.container a{
+    text-decoration: none;
+    color: white;
+}
+
+.footerlink1, 
+.footerlink2{
+    margin-top: 20px;
+} 
+
+.footerlink1 span,
+.footerlink2 span{
+  vertical-align: middle;
+  padding: 0;
+  margin: 0;
+  
+}
+
+.footerlink1 img,
+.footerlink2 img{
+    width: 30px;
+    margin:0;
+    padding: 0;
+    vertical-align: middle;
+}
+
+
+
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+.loading{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 99;
+    background: linear-gradient(273.41deg, #4A14E4 0%, #900AB1 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+@media(max-width: 760px){
+    .movierow--left,
+    .movierow--rigth{
+        opacity: 1;
+    }
+    .destaque{
+        height: 90vh;
+    }
+
+    .destaque--nome{
+        font-size: 40px;
+    }
+
+    .destaque--info{
+        font-size: 16px;
+    }
+
+    .destaque--descricao{
+        font-size: 14px;
+        max-width: 100%;
+        margin-right: 30px;
+    }
+
+    .btn--saibamais{
+        font-size: 16px;
+    }
+
+    .destaque--genres{
+        font-size: 14px;
+    }
+
+}
