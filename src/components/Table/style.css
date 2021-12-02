@@ -1,0 +1,13 @@
+#tabela {
+  min-height: 300px;
+  overflow: auto;
+  padding: 30px;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+  width: 80vw;
+}
+
+.linhaTab {
+  padding: 30px;
+  text-align: center;
+}

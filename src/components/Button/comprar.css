@@ -14,6 +14,7 @@
 }
 #add {
   position: absolute;
+  margin-left: 10vw;
   top: 40%;
   width: 130vw;
   height: 10vw;
