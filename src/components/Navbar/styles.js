@@ -4,6 +4,7 @@ let linksMarginRight = '6%'
 let profilePicSize = '75px'
 
 let linksHeightSidebar = '10vh'
+let linksMarginLeft = 20
 
 const windowWith = window.innerWidth;
 
@@ -13,7 +14,7 @@ if (windowWith < 1300 && windowWith > 1200) {
 } else if (windowWith < 1200) {
     linksMarginRight = '10%'
 
-}else if (windowWith < 1100) {
+} else if (windowWith < 1100) {
     linksMarginRight = '0%'
 }
 
@@ -36,6 +37,24 @@ export const Container = styled.div`
         height: 100vh;
 
         flex-direction: column;
+
+        display: none;
+    }
+
+    @media (max-width: 850px) {
+        width: 40vw;
+    }
+
+    @media (max-width: 650px) {
+        width: 50vw;
+    }
+
+    @media (max-width: 500px) {
+        width: 70vw;
+    }
+
+    @media (max-width: 350px) {
+        width: 75vw;
     }
 `
 
@@ -74,6 +93,10 @@ export const LinksContainer = styled.div`
 
         width: 100%;
         height: 100%;
+
+        #home, #GenresLink {
+            margin-right: 0;
+        }
     }
 `
 
@@ -97,9 +120,16 @@ export const Link = styled.a`
         width: 100%;
         height: 10%;
 
+        
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
+        
+        margin-left: ${linksMarginLeft + 'px'};
+
+        &#home {
+            margin-left: ${linksMarginLeft * 2 + 'px'};
+        }
     }
 
 `
@@ -143,7 +173,7 @@ export const GenresContainer = styled.div`
 
         &:hover {
             #genres-hidden-items {
-                display: flex;
+                display: block;
                 width: 100%;
             }
     }
@@ -231,8 +261,18 @@ export const ProfileContainer = styled.div`
 
     @media (max-width: 1100px)  {
         width: 100%;
+
         height: ${linksHeightSidebar};
         margin: 0;
+        padding: 0;
+
+        margin-bottom: 25%;
+
+        
+        #profile-hidden-items {
+            display: flex;
+        }
+    
     }
 
 `
@@ -245,6 +285,7 @@ export const ProfileImageContainer = styled.div`
     align-items: center;
     justify-content: center;
 
+    
     
 `
 
@@ -272,6 +313,24 @@ export const HiddenItemsContainer = styled.div`
     position: absolute;
     top: 100%;
 
+    @media (max-width: 1100px) {
+        
+        &#genres-hidden-items {
+            display: none;
+            width: 50%;
+            
+        }
+
+        &#profile-hidden-items {
+            flex-direction: row;
+
+            width: 100%;
+            background: ${NavbarColor};
+        }
+
+        
+    }
+
     
 `
 
@@ -286,4 +345,32 @@ export const HiddenItems = styled(Link)`
         }
     }
 
+    @media (max-width: 1100px) {
+        display: block;
+        width: calc(100% - ${linksMarginLeft}px);
+        border: none;
+        padding: 6%;
+        font-size: 1rem;
+
+        &.profileHiddenLink {
+            margin: 10px 0 0 0;
+            text-align: center;
+            border-bottom: 2px solid ${primaryColor};
+        }
+
+        &.profileHiddenLink:nth-child(3) {
+            color: #ee2d2d !important;
+            border-bottom: 2px solid #ee2d2d;
+        }
+    }
+
 `
+
+export const menuIcon = {
+    strokeWidth: 3,
+    fontSize: 35,
+
+    position: 'absolute',
+    top: '3%',
+    left: '5%',
+}
