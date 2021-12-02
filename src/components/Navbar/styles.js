@@ -36,6 +36,7 @@ export const Container = styled.div`
         width: 30vw;
         height: 100vh;
 
+        position: absolute;
         flex-direction: column;
 
         display: none;

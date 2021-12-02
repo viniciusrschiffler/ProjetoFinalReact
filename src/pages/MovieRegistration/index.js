@@ -77,7 +77,6 @@ function MovieRegistration() {
                 </Form>
             </Container>
         </>
-
     );
 }
 
