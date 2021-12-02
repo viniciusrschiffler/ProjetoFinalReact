@@ -2,7 +2,7 @@ import { Card, Row, Col, Form, FloatingLabel } from "react-bootstrap";
 import { Container } from "./styles";
 import Btn from "../../components/LoginButton";
 
-import Logo from "../../assets/Logo.png";
+import Logo from "../../img/Logo.png";
 
 function Login() {
 

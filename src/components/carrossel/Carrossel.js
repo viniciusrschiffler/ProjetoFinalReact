@@ -1,7 +1,7 @@
 import React, { useEffect, useState} from 'react';
-import Api from "../api/Api";
+import Api from "../../services/carroselApi";
 import"../style/styled.css"
-import gif from "../img/gif.gif"
+import gif from "../../img/gif.gif"
 import Destaque from "../destaque/Destaque"
 import MovieRow from "../movierow/MovieRow";
 

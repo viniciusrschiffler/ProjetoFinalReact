@@ -20,7 +20,7 @@ import {
     menuIcon
 } from './styles'
 
-import LogoImage from '../../assets/Logo.png'
+import LogoImage from '../../img/Logo.png'
 
 function Navbar() {
     const windowWith = window.innerWidth;

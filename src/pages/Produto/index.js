@@ -32,7 +32,7 @@ function Produto() {
 
   useEffect(() => {
     api
-      .get("/9297?api_key=345411636508e2b74308228fcfc87973")
+      .get("/movie/9297?api_key=345411636508e2b74308228fcfc87973")
       .then((response) => setItem(response.data))
       .catch((err) => {
         console.error("Base de dados não encontrada" + err);

@@ -1,5 +1,5 @@
 import React,{useState} from 'react';
-import img from '../img/Imagem1.png';
+import img from '../../img/Imagem1.png';
 import '../style/styled.css'
 
 
