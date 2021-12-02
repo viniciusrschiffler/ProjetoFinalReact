@@ -7,7 +7,7 @@ import {
 } from 'react-router-dom';
 
 import Home from './pages/home';
-import Editar from './pages/editar.jsx';
+import Editar from './pages/editar';
 
 
 const Routes = () => (

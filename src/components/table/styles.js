@@ -10,8 +10,7 @@ export const TableBoots = styled.section`
         top: 10%;
     `
 export const Info = styled.td`
-        height: 100px;
         align-items: center;
+        display: flex;
         flex-direction: column;
-        
     `
