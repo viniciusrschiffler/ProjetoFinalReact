@@ -10,7 +10,6 @@ import styled from "styled-components";
         position: relative;
         color: white;
         font-size: 260%;
-        //padding-top: 10vw;
         text-align: center;
         top: 20vh;
         text-decoration: none;
@@ -229,6 +228,7 @@ import styled from "styled-components";
             opacity: 1;
             }
         }
+
         
         &:focus:not(:active){
         animation: circleGrow 0.2s linear;
@@ -610,15 +610,245 @@ import styled from "styled-components";
             top: 25.5vh;
         }
         @media (max-width: 495px) {
-            top: 25vh;
+            top: 28vh;
             font-size: 90%;
             padding: 120px 100px 0px 100px;
         }
         @media (max-width: 400px) {
-            top: 23vh;
+            top: 28vh;
             padding: 120px 75px 0px 75px;
         }
         @media (max-width: 340px) {
             padding: 110px 60px 0px 60px;
         }
     `;
+
+export const ButtonADM = styled.button `
+    position: relative;
+    object-fit: cover;
+    left: 7.4vw;
+    top: 70vh;
+    border-radius: 25px;
+    width: 22.2vw;
+    height: 53px;
+    background-color: #0be646;
+    border: none;
+    transition: 0.1s;
+    display: none;
+
+@keyframes circleGrow {
+        0% {
+            transform: scale(.95);
+            opacity: 0.7;
+            } 
+        50% {
+            opacity: 0.8;
+            }
+        100% {
+            transform: scale(1);
+            opacity: 1;
+            }
+        }
+
+        &:focus:not(:active){
+        animation: circleGrow 0.2s linear;
+        }
+
+        &:hover {
+            transform: scale(1.09);
+            cursor: pointer;
+            
+        }
+       @media(max-width: 1000px) {
+        left: 5.6vw;
+        width: 24vw;
+       }
+       @media(max-width: 1000px) {
+        left: 5vw;
+        width: 25.5vw;
+       }
+       @media(max-width: 650px) {
+        position:absolute;
+        top: 22.5vh;
+        left: 19.3vw;
+        width: 8vw;
+        height: 33vh;
+       }
+       @media (max-width: 550px) {
+        left: 14.2vw;
+        width: 8.6vw;
+        top: 21.5vh;
+       }
+       @media (max-width: 510px) {
+        left: 12vw;
+        width: 9vw;
+       }
+       @media(max-width: 495px) {
+           top: 18.5vh;
+           left: 10.5vw;
+       }
+       @media(max-width: 450px) {
+            top: 55vh;
+            left: 21vw;
+            width: 58vw;
+            height: 8vh;
+       }
+       @media(max-width:400px) {
+           width: 63vw;
+           left: 18vw;
+       }
+       @media(max-width:400px) {
+           width: 66vw;
+       }
+       @media(max-width:375px) {
+           width: 68vw;
+       }
+       @media(max-width:360px) {
+           width: 70vw;
+           border-radius: 12px;
+       }
+       @media(max-width:355px) {
+        width: 71.5vw;
+        left: 13.5vw;
+       }
+       @media(max-width: 335px) {
+           width: 75vw;
+       }
+       @media(max-width: 335px) {
+           width: 79vw;
+       }
+`;
+
+
+export const ImgAdicionar = styled.img`
+    object-fit: cover;
+    height: 62%;
+
+    @media (max-width: 650px) {
+        height: 21.5%;
+        width: auto;
+    }
+    @media(max-width: 495px) {
+        height: 22.8%;
+        width: 90%;
+    }
+    @media(max-width: 485px) {
+        width: 22% 22%;
+    }
+    @media(max-width: 450px) {
+        width: auto;
+        height: 75%;
+    }
+    @media(max-width: 450px) {
+        width: auto;
+        height: 60%;
+    }
+    @media(max-width: 355px) {
+        width: 13%;
+        height: 50%;
+    }
+`;
+
+export const Circle = styled.div`
+
+    display: block;
+    left: 44.5vw;
+    top: 36vh;
+
+    z-index: 4;
+
+    position: absolute;
+    border: 16px solid #bdc3c7;
+    width: 120px;
+    height: 120px;
+    border-top-color: #1abc9c;
+    border-bottom-color: #3498db;
+    border-radius: 50%;
+    animation: coloredspin 5s linear infinite; 
+
+
+    
+    @media(max-width: 1050px) {
+        left: 43vw;
+    }
+    @media(max-width: 900px) {
+        left: 42.5vw;
+    }
+    @media(max-width: 850px) {
+        left: 41.5vw;
+    }
+    @media(max-width: 750px) {
+        left: 40vw;
+    }
+    @media(max-width: 675px) {
+        left: 39vw;
+    }
+    @media(max-width: 600px) {
+        left: 37.5vw;
+    }
+    @media(max-width: 535px) {
+        left: 36vw;
+    }
+    @media(max-width: 450px) {
+        left: 34vw;
+    }
+    @media(max-width: 390px) {
+        left: 31vw;
+    }
+    @media(max-width: 350px) {
+        left: 29.5vw;
+    }
+
+    @keyframes coloredspin {
+  0%{
+    transform: rotate(0deg) scale(1);
+    border-top-color: #7b0e96;
+    border-bottom-color: #7b0e96;
+    border-left-color: #3509b5;
+    border-right-color: #3509b5;
+
+  }
+  12% {
+    transform: rotate(90deg) scale(1.1);
+  }
+  25% {
+    transform: rotate(180deg) scale(1.2);
+    border-top-color: #3509b5;
+    border-bottom-color: #3509b5;
+    border-left-color: #2f1b69;
+    border-right-color: #2f1b69;
+  }
+  37% {
+      transform: rotate(270deg) scale(1.3)
+  }
+  50% {
+    transform: rotate(360deg) scale(1.4);
+    border-top-color: #2f1b69;
+    border-bottom-color: #2f1b69;
+    border-left-color: #3509b5;
+    border-right-color: #3509b5;
+  }
+  62%{
+      transform: rotate(450deg) scale(1.3)
+  }
+  75% {
+    transform: rotate(540deg) scale(1.2);
+    border-top-color: #3509b5;
+    border-bottom-color: #3509b5;
+    border-left-color: #7b0e96;
+    border-right-color: #7b0e96;
+  }
+  87% {
+    transform: rotate(630deg) scale(1.1)
+  }
+  100%{
+    transform: rotate(720deg) scale(1);
+    border-top-color: #7b0e96;
+    border-bottom-color: #7b0e96;
+    border-left-color: #3509b5;
+    border-right-color: #3509b5;
+  }
+}
+
+
+`;

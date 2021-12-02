@@ -1,5 +1,12 @@
+//import axios from "axios";
+import { useEffect, useState } from "react";
+
+import api from "../../services/api";
+
 import imgCompra from "../../img/carrinho.png";
 import imgAluguel from "../../img/alugar.png";
+import imgAdicionar from "../../img/adicionar.svg";
+
 import {
     Title,
     Background,
@@ -11,66 +18,97 @@ import {
     ImgAluguel,
     Button2,
     Rating,
-    Description
+    Description,
+    ButtonADM,
+    ImgAdicionar,
+    Circle,
 } from "./styles";
 
 import Navbar from "../../components/Navbar";
 
 function Produto() {
-    return (
-        <>
-            <Navbar />
-            <Container>
 
-                <Background src="https://media.gazetadopovo.com.br/2021/07/15104526/2_guaranC3A1_mauC3A9s_IG_bom_gourmet-960x540.jpg" />
+    const [item, setItem] = useState();
 
-                <ProdutoContainer>
+  useEffect(() => {
+    api
+      .get("/9297?api_key=345411636508e2b74308228fcfc87973")
+      .then((response) => setItem(response.data))
+      .catch((err) => {
+        console.error("Base de dados não encontrada" + err);
+      });
+      
+  }, []);
 
-                    <Foto src="https://www.saudaveleforte.com.br/wp-content/uploads/2019/11/guarana00-1.jpg" />
+  const [isVisible, setIsVisible] = useState(false);
 
-                    <div>
-                        <Title>Pó de Guaraná</Title>
 
-                    </div>
 
-                    <div>
+//poster_path               CAPA ok
+//title                     TITULO ok
+//vote_average              AVALIAÇÂO ok
+//backdrop_path             BACKGROUND POSTER ok
+//overview                  DESCRIÇÃO ok
+//("R$ " + preco)           PREÇO ok
 
-                        <Button>
-                            <div id="iconBuy">
-                                <ImgCompra src={imgCompra} />
-                            </div>
-                            <div id="price">
-                                R$ 0,99
-                            </div>
-                        </Button>
-                        <Button2>
-                            <div id="iconRent">
-                                <ImgAluguel src={imgAluguel} />
-                            </div>
-                            <div id="price2">
-                                R$ 1,99
-                            </div>
-                        </Button2>
+   return (
 
-                    </div>
-                    <Rating>
-                        Avaliação : 12389
-                    </Rating>
-                    <div>
-                        <div>
-                            <Description>
-                                Há relatos sobre alguns alunos do
-                                Serratec que utilizam deste produto para
-                                se manterem acordados.
-                                Testemunhas confirmam que o usuário é
-                                integrante do sexto grupo da turma 06.
-                            </Description>
+       
+        <Container> 
+            <Background src={"https://www.themoviedb.org/t/p/w220_and_h330_face" + item?.backdrop_path}/>
+            <ProdutoContainer>
+                <Foto src={"https://www.themoviedb.org/t/p/w220_and_h330_face/" + item?.poster_path} />
+                <div>
+                    <Title>{item?.title}</Title>
+                </div>
+                <div>
+                    {/* <Button onClick={e =>handleAdd(e)}> */}
+                        <Button  onClick={() => {
+                            setIsVisible(v => !v);
+                            setTimeout(() => {
+                                setIsVisible(false)
+                            }, 1000)
+                        }}>
+                            
+                        <div id="iconBuy">
+                            <ImgCompra src={imgCompra} />
                         </div>
-                    </div>
-                </ProdutoContainer>
-            </Container>
-        </>
-    )
+                        <div id="price">
+                            R$ 1,99
+                        </div>
+                    </Button>
+                    <Button2 onClick={() => {
+                            setIsVisible(v => !v);
+                            setTimeout(() => {
+                                setIsVisible(false)
+                            }, 1000)
+                        }}>
+                        <div id="iconRent">
+                            <ImgAluguel src={imgAluguel} />
+                        </div>
+                        <div id="price2">
+                            R$ 1,99
+                        </div>
+                    </Button2>
+                    <ButtonADM>
+                        <ImgAdicionar src={imgAdicionar} />
+                    </ButtonADM>
+                </div>
+                <div>
+                    <Rating>
+                        {"Avaliação " + item?.vote_average}
+                    </Rating>
+                </div>
+                <div>
+                    <Description>
+                            {item?.overview}
+                    </Description>
+                </div>
+                <div>
+                        {isVisible ? <Circle></Circle> : ''}
+                </div>
+            </ProdutoContainer>
+        </Container>
+   )
 }
-
 export default Produto;
