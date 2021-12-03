@@ -1,5 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
+
 export default createGlobalStyle `
     * {
         margin: 0;
@@ -27,7 +28,7 @@ export default createGlobalStyle `
     }
 
     .content-box-login {
-        width: 25vw;
+        width: 50vh;
     }
     
     .borda-arredondada {

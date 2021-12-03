@@ -1,9 +1,58 @@
 import { Card, Row, Col, Form, FloatingLabel } from "react-bootstrap";
 import { Container, Divider } from "./styles";
+import {useNavigate} from "react-router-dom";
 
 import Btn from "./../../components/LoginButton";
 
 function CadastroCliente() {
+
+  const navigation=useNavigate()
+  function handleSubmit(event) {
+    event.preventDefault();
+    let nomeCompleto=document.getElementById("nomeCompleto").value;
+    let cpf=document.getElementById("cpf").value;
+    let dataNascimento=document.getElementById("dataNascimento").value;
+    let telefone=document.getElementById("telefone").value;
+    let celular=document.getElementById("celular").value;
+    let foto=document.getElementById("foto").value;
+    let cep=document.getElementById("cep").value;
+    let rua=document.getElementById("nomeRua").value;
+    let numero=document.getElementById("numero").value;
+    let complemento=document.getElementById("complemento").value;
+    let bairro=document.getElementById("bairro").value;
+    let cidade=document.getElementById("cidade").value;
+    let estado=document.getElementById("estado").value;
+    let email=document.getElementById("email").value;
+    let userName=document.getElementById("userName").value;
+    let password=document.getElementById("password").value;
+
+    let data = { 
+      nomeCompleto: nomeCompleto,
+      cpf: cpf,
+      dataNascimento:dataNascimento,
+      telefone: telefone,
+      celular: celular,
+      foto: foto,
+      nomeUsuario: userName,
+      senha: password,
+
+      endereco: {
+          cep: cep,
+          rua: rua,
+          numero: numero,
+          complemento: complemento,
+          bairro: bairro,
+          cidade: cidade,
+          estado: estado,
+          email: email,
+      }
+     }
+     let users = JSON.parse(localStorage.getItem("pessoas")) || []
+     users.push(data)
+     localStorage.setItem("pessoas", JSON.stringify(users));
+     navigation("/")
+    }
+
   return (
     <Container>
       <Card className="content-box">
@@ -30,13 +79,20 @@ function CadastroCliente() {
           </Row>
           <Row className="g-3">
             <Col md>
-              <FloatingLabel controlId="telefone" label="Telefone">
+              <FloatingLabel controlId="telefone" label="Telefone" className="mb-3">
                 <Form.Control type="text" id="telefone" placeholder=" " />
               </FloatingLabel>
             </Col>
             <Col md>
-              <FloatingLabel controlId="celular" label="Celular">
+              <FloatingLabel controlId="celular" label="Celular" className="mb-3">
                 <Form.Control type="text" id="celular" placeholder=" " />
+              </FloatingLabel>
+            </Col>
+          </Row>
+          <Row className="g-3">
+            <Col md>
+              <FloatingLabel controlId="foto" label="Link Foto" className="mb-3">
+                <Form.Control type="text" id="foto" placeholder="http://minhaFoto.com" />
               </FloatingLabel>
             </Col>
           </Row>
@@ -100,13 +156,13 @@ function CadastroCliente() {
           </Row>
           <Row className="g-3">
             <Col md>
-              <FloatingLabel controlId="nomeUsuario" label="Nome de usuário" className="mb-3">
-                <Form.Control type="text" id="nomeUsuario" placeholder=" " />
+              <FloatingLabel controlId="userName" label="Nome de usuário" className="mb-3">
+                <Form.Control type="text" id="userName" placeholder=" " />
               </FloatingLabel>
             </Col>
             <Col md>
-              <FloatingLabel controlId="senhaUsuario" label="Senha" className="mb-5">
-                <Form.Control type="password" id="senhaUsuario" placeholder=" " />
+              <FloatingLabel controlId="password" label="Senha" className="mb-5">
+                <Form.Control type="password" id="password" placeholder=" " />
               </FloatingLabel>
             </Col>
           </Row>
@@ -114,7 +170,7 @@ function CadastroCliente() {
             <Col md={6}>
             </Col>
             <Col md={6}>
-              <Btn title="Salvar" url="/products"></Btn>
+              <Btn title="Salvar" url=" " handleFunction={e =>{handleSubmit(e)}} ></Btn>
             </Col>
           </Row>
         </Card.Body>
