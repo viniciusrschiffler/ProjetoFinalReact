@@ -226,7 +226,8 @@ export const searchIcon = {
     top: '25%',
     color: '#000',
     fontSize: 20,
-    strokeWidth: 3.5
+    strokeWidth: 3.5,
+    cursor: 'pointer'
 }
 
 if (windowWith < 1100) {
