@@ -2,12 +2,12 @@ import styled from 'styled-components';
 
 export const Section = styled.section`
     width: 90%;
-    
     padding: 10px;
     background: rgba(255,255,255,.95);
     border-radius: 10px;
     border-bottom: 10px solid #808080;
     margin-top: 15px;
+
 `
 
 export const Title = styled.h1`
@@ -30,10 +30,11 @@ export const Form = styled.p`
 `
 
 export const Row = styled.p`
-    width: 100%;
+    
 `
 export const Col = styled.p`
-    width: 100%;
+width: 100%;
+    
 `
 export const FormGroup = styled.p`
     width: 100%;
@@ -45,14 +46,15 @@ export const Input = styled.input`
     width: 100%;
 `
 export const Button = styled.button`
-    width: 80px;
+    width: 90px;
     height: 40px;
     align-items: center;
     flex-direction: column;
+    
 
-    h1{
+    h2{
         font-size: 20px;
-        width: 80px;
+        width: 90px;
         height: 40px;
         text-align: center;
         color: #fff;
@@ -62,7 +64,7 @@ export const Button = styled.button`
     }
 
     &:hover {
-        width: 80px;
+        width: 90px;
         height: 40px;
         text-align: center;
         background: rgb(68, 7, 83);

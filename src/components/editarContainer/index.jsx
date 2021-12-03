@@ -1,5 +1,6 @@
+import {useNavigate} from "react-router-dom";
 import {
-Section,
+    Section,
     Title,
     ListFormulario,
     Form,
@@ -12,6 +13,13 @@ Section,
 } from './styles';
 
 const EditarContainer = props => {
+    const pessoa=JSON.parse(localStorage.getItem("pessoa"))
+    const navigation=useNavigate()
+
+    function handleSubmit (e){
+        e.preventDefault();
+        navigation("/perfil")
+    }
     return (
         <Section>
             <Title>Editar Dados</Title>
@@ -28,6 +36,7 @@ const EditarContainer = props => {
           name="email"
           placeholder="E-mail"
           type="email"
+          value={pessoa.email}
         />
       </FormGroup>
     </Col>
@@ -41,6 +50,7 @@ const EditarContainer = props => {
           name="password"
           placeholder="Senha"
           type="password"
+          value={pessoa.senha}
         />
       </FormGroup>
     </Col>
@@ -53,6 +63,8 @@ const EditarContainer = props => {
       id="exampleAddress"
       name="address"
       placeholder="@username"
+      value={pessoa.nomeUsuario}
+
     />
   </FormGroup>
   <FormGroup>
@@ -63,6 +75,7 @@ const EditarContainer = props => {
       id="exampleAddress2"
       name="address2"
       placeholder="Nome Sobrenome"
+      value={pessoa.nomeCompleto}
     />
   </FormGroup>
   <Row form>
@@ -74,7 +87,10 @@ const EditarContainer = props => {
         <Input
           id="exampleCity"
           name="city"
+          type="tel"
+          value={pessoa.telefone}
           placeholder="(XX)XXXXX-XXXX"
+          
         />
       </FormGroup>
     </Col>
@@ -86,15 +102,18 @@ const EditarContainer = props => {
         <Input
           id="exampleState"
           name="state"
+          type="date"
           placeholder="dd/mm/aaaa"
+          value={pessoa.dataNascimento}
+          
         />
       </FormGroup>
     </Col>
-    <Col md={2}>
+    <Col md={6}>
     </Col>
   </Row>
-  <Button>
-    <h1>Atualizar</h1>
+  <Button onClick={e=>{handleSubmit(e)}}>
+    <h2>Atualizar</h2>
   </Button>
 </Form>
             </ListFormulario>  {/*vai entrar o bootstrap da Dani*/}

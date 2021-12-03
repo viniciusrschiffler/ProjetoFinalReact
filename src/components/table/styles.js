@@ -9,7 +9,7 @@ export const TableBoots = styled.section`
         position: relative;
         top: 10%;
     `
-export const Info = styled.td`
+export const Info = styled.div`
         align-items: center;
         display: flex;
         flex-direction: column;

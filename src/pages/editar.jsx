@@ -5,12 +5,16 @@ import EditarContainer from '../components/editarContainer'
 
 
 
+
 function Editar (props) {
+    
+    localStorage.getItem("nome")
+    localStorage.removeItem("nome")
   return (
     
             <Container>
             <EditarContainer name='abc' editar={[]} />
-        </Container>
+            </Container>
         
   );
 };

@@ -1,5 +1,5 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 import{
     Container,
@@ -7,8 +7,8 @@ import{
 } from './styles.js'
 
 const Edit = props => {
-    const history = useHistory();
-    const handleOnClick = route => history.push(route);
+    const navigation=useNavigate()
+    const handleOnClick = route => navigation(route);
 
     return (
     <Container>

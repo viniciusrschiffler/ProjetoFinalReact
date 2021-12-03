@@ -1,5 +1,5 @@
 import React from 'react';
-import Routes from './Routes';
+import RoutesComponent from './Routes';
 
 //function App (){
 //    return (
@@ -9,7 +9,7 @@ import Routes from './Routes';
 //}
 
 const App = () => (
-    <Routes />
+    <RoutesComponent />
 );
 
 export default App;

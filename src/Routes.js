@@ -2,7 +2,7 @@ import React from 'react';
 
 import {
     BrowserRouter as BRouter,
-    Switch,
+    Routes,
     Route
 } from 'react-router-dom';
 
@@ -10,13 +10,13 @@ import Home from './pages/home';
 import Editar from './pages/editar';
 
 
-const Routes = () => (
+const RoutesComponent = () => (
     <BRouter>
-        <Switch>
-            <Route path="/" exact component={ Home } />
-            <Route path="/editar" exact component={ Editar } />
-        </Switch>
+        <Routes>
+            <Route path="/perfil" element={<Home />} />
+            <Route path="/editar" element={<Editar />} />
+        </Routes>
     </BRouter>
 );
 
-export default Routes;
+export default RoutesComponent;
