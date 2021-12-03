@@ -1,5 +1,8 @@
 import React from 'react';
 
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
+
 import {
     Container,
     Form,
@@ -15,7 +18,17 @@ import {
 import Navbar from '../../components/Navbar/index.js';
 
 function MovieRegistration() {
+    const MySwal = withReactContent(Swal)
 
+    function handeSubmit(e) {
+        e.preventDefault();
+
+        MySwal.fire({
+            icon: 'success',
+            title: "Filme cadastrado com sucesso!",
+            timer: 2000,
+          })
+    }
 
     return (
         <>
@@ -24,10 +37,11 @@ function MovieRegistration() {
                 <Form>
 
                     <AlignItemsCenter style={{ marginBottom: '50px' }}>
-                        <h1 style={{ color: '#4d4d4d' }} >CADASTRAR FILMES</h1>
+                        <h1 id="title" style={{ color: '#4d4d4d' }} >CADASTRAR FILMES</h1>
                     </AlignItemsCenter>
 
-                    <InputsContainer>
+                    <InputsContainer id="frist-inputs">
+
                         <InputLabelContainer>
                             <Label>Nome</Label>
                             <Input placeholder="Digite o nome do filme" />
@@ -40,11 +54,8 @@ function MovieRegistration() {
 
                         <InputLabelContainer>
                             <Label>Valor de Alugel</Label>
-                            <Input type="number" placeholder="Digite o valor de alugue" />
+                            <Input type="number" placeholder="Digite o valor de aluguel" />
                         </InputLabelContainer>
-
-
-
 
                     </InputsContainer>
 
@@ -72,7 +83,7 @@ function MovieRegistration() {
                     </InputsContainer>
 
                     <AlignItemsCenter>
-                        <Button>CADASTRAR</Button>
+                        <Button onClick={e => handeSubmit(e)}>CADASTRAR</Button>
                     </AlignItemsCenter>
                 </Form>
             </Container>
