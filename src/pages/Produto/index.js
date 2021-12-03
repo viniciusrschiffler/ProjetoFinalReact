@@ -30,8 +30,6 @@ import Navbar from "../../components/Navbar";
 function Produto() {
     var params = useParams();
     var idFilme = "9294";
-    //console.log(params)
-    //localStorage.getItem("idFilme")
     
 
     const [produto, setProduto] = useState();
@@ -42,7 +40,7 @@ function Produto() {
   useEffect(() => {
 
     api
-      .get(`/movie/${params.idFilme}?api_key=345411636508e2b74308228fcfc87973`)
+      .get(`/${params.type}/${params.idFilme}?api_key=345411636508e2b74308228fcfc87973`)
       .then((response) => setProduto(response.data))
       .catch((err) => {
         console.error("Base de dados não encontrada" + err);

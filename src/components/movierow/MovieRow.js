@@ -1,4 +1,5 @@
 import React,{useState} from 'react';
+import { useNavigate } from 'react-router-dom'
 import img from '../../img/Imagem1.png';
 import '../style/styled.css'
 
@@ -8,6 +9,9 @@ import '../style/styled.css'
 export default ({title,itens}) => {
 
     const [scrollx, setScrollx] = useState(0);
+
+
+    const navigation = useNavigate()
 
     const handleLeft = () => {
 
@@ -26,6 +30,19 @@ export default ({title,itens}) => {
         }
         setScrollx(x) 
     }
+
+    function handleNavigate(e, idFilme) {
+        e.preventDefault();
+        
+        if (title == 'Séries') {
+            navigation(`/products/tv/${idFilme}`)
+        }else {
+            navigation(`/products/movie/${idFilme}`)
+        }
+
+        
+    }
+    
     
     return(
         <div className="movieRow">
@@ -41,7 +58,7 @@ export default ({title,itens}) => {
                 <div className="movieRow--list" style={{marginLeft: scrollx, width: itens.results.length * 150}}>
                     {itens.results.map((item, key) => {
                         return(
-                        <div key={key} className="movierow--item">
+                        <div onClick={e => handleNavigate(e, item.id)} key={key} className="movierow--item">
                             <img src={`https://image.tmdb.org/t/p/w300${item.poster_path}`} alt="" />
 
                         </div>

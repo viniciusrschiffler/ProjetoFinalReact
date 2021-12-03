@@ -1,10 +1,14 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom'
 import"../style/styled.css"
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default ({item}) =>{
+    const navigation = useNavigate()
+
     let fristData= new Date(item.first_air_date);
     let genres = []
+
     for( let i in  item.genres ){
         genres.push(item.genres[i].name)
     }
@@ -13,6 +17,13 @@ export default ({item}) =>{
     if(descricao.length > 200){
         descricao = descricao.substring(0, 200) + '...';
     }
+
+    function handleNavigate(e) {
+        e.preventDefault();
+        
+        navigation(`/products/tv/${item.id}`)
+    }
+
     return(
         <section className="destaque" style={{backgroundImage: `url(https://image.tmdb.org/t/p/original${item.backdrop_path})`}}>
             <div className="destaque--vertical">
@@ -25,7 +36,7 @@ export default ({item}) =>{
                     </div>
                     <div className="destaque--descricao">{descricao}</div>
                     <div className="destaque--buttons">
-                        <a  hrf="#"className="btn--saibamais">+Saiba Mais</a>
+                        <a  onClick={e => handleNavigate(e)} hrf="#"className="btn--saibamais">+Saiba Mais</a>
                     </div>
                     <div className="destaque--genres">
                         <strong>Gêneros: </strong>{genres.join(', ')}
