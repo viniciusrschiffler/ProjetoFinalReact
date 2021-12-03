@@ -1,14 +1,39 @@
 import { Card, Row, Col, Form, FloatingLabel } from "react-bootstrap";
 import { Container } from "./styles";
 import Btn from "../../components/LoginButton";
+import {useNavigate} from "react-router-dom";
+import Swal from 'sweetalert2';
+import withReactContent from 'sweetalert2-react-content'
 
 import Logo from "../../img/Logo.png";
 
 function Login() {
+  const MySwal = withReactContent(Swal);
 
- function handleSubmit() {
+  const navigation=useNavigate()
+  function handleSubmit(event) {
+    event.preventDefault();
+
    let userName=document.getElementById("nomeUsuario").value;
    let password=document.getElementById("senha").value;
+
+   let users = JSON.parse(localStorage.getItem("pessoas")) || []
+   let usuarioExistente= users.map(user=> {
+      if (user.nomeUsuario == userName && user.senha == password){
+        navigation("/home")
+
+        return user;
+      };
+   })
+
+    if(usuarioExistente[0]== undefined){
+      MySwal.fire({
+        icon: "error", 
+        timer: 1500,
+        title: <p>Usuário ou Senha Inválidos!!</p>,
+        footer: 'Copyright grupo 06',
+      })
+    }
   }
   return (
     <Container>
@@ -34,7 +59,7 @@ function Login() {
           </Row>
           <Row>
             <Col md>
-              <Btn title="Acessar" url="/" className="mb-3" handleFunction={handleSubmit} ></Btn>
+              <Btn title="Acessar" url=" " className="mb-3" handleFunction={e =>{handleSubmit(e)}} ></Btn>
             </Col>
             <Col md>
               <Btn title="Cadastrar" url="/cliente/cadastro"></Btn>
