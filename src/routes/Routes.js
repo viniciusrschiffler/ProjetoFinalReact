@@ -14,7 +14,7 @@ function RoutesComponent() {
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<Login />} />
-                <Route path="/products" element={<Products />} />
+                <Route path="/products/:idFilme" element={<Products />} />
                 <Route path="/cart" element={<Cart />} />
                 <Route path="/nav" element={<Navbar />} />
                 <Route path="/movie-registration" element={<MovieRegistration />} />
