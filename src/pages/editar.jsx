@@ -5,15 +5,15 @@ import EditarContainer from '../components/editarContainer'
 
 
 
-
-const Editar = props => {
-
-    return(
-        <Container>
+function Editar (props) {
+  return (
+    
+            <Container>
             <EditarContainer name='abc' editar={[]} />
         </Container>
-    )
-}
+        
+  );
+};
 
 export default Editar; 
 
