@@ -1,9 +1,9 @@
 import React, { useEffect, useState} from 'react';
 import Api from "../../services/carroselApi";
 import"../style/styled.css"
-import gif from "../../img/gif.gif"
 import Destaque from "../destaque/Destaque"
 import MovieRow from "../movierow/MovieRow";
+import Loading from '../Loading';
 
 
 function Carrossel(){
@@ -56,10 +56,7 @@ function Carrossel(){
             </div>
 
             {data.length <= 0 && 
-                <div className="loading">
-                <img src={gif} alt="loading" />
-
-            </div>
+                <Loading />
             }        
             
     

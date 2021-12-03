@@ -213,19 +213,6 @@ footer{
     display: none;
 }
 
-.loading{
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    z-index: 99;
-    background: linear-gradient(273.41deg, #4A14E4 0%, #900AB1 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 
 @media(max-width: 760px){
     .movierow--left,
