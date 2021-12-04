@@ -30,7 +30,7 @@ import Loading from "../../components/Loading";
 
 function Produto() {
     var params = useParams();
-    var idFilme = "9294";
+    var idFilme = params.idFilme;
 
     const API_KEY = '345411636508e2b74308228fcfc87973'
 
@@ -86,6 +86,21 @@ function Produto() {
         );
     }
 
+    function handleAddInCart(preco, tipo) {
+
+        filmes.push({
+            idFilme,
+            title: produto.title,
+            preco,
+            tipo
+        })
+
+        localStorage.setItem('filmes', JSON.stringify(filmes));
+    }
+
+    const filmes = JSON.parse(localStorage.getItem("filmes")) || [];
+
+
 
     return (
 
@@ -100,16 +115,13 @@ function Produto() {
                         <Title>{produto?.title}</Title>
                     </div>
                     <div>
-                        {/* <Button onClick={e =>handleAdd(e)}> */}
                         <Button onClick={() => {
                             setIsVisible(v => !v);
                             setTimeout(() => {
                                 setIsVisible(false)
                             }, 1000)
-                            localStorage.setItem("id", JSON.stringify(idFilme));
-                            localStorage.setItem("filme", produto?.title);
-                            localStorage.setItem("preço", JSON.stringify({ preco }));
-                            localStorage.setItem("tipo", "Compra");
+
+                            handleAddInCart(preco,"Compra")
 
                         }}>
 
@@ -125,10 +137,8 @@ function Produto() {
                             setTimeout(() => {
                                 setIsVisible(false)
                             }, 1000)
-                            localStorage.setItem("id", JSON.stringify(idFilme));
-                            localStorage.setItem("filme", produto?.title);
-                            localStorage.setItem("preço", JSON.stringify(RentPrice));
-                            localStorage.setItem("tipo", "Aluguel");
+
+                            handleAddInCart(RentPrice,"Alguel")
                         }}>
                             <div id="iconRent">
                                 <ImgAluguel src={imgAluguel} />

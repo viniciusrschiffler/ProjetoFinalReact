@@ -1,6 +1,11 @@
+body {
+    background: linear-gradient(135.03deg, #0C061D 26.04%, #230871 57.81%, #440753 100%);
+}
+
 h2{
     margin: 10px 20px;
     font-size: 35px;
+    color: #fff;
 }
 
 
@@ -36,7 +41,7 @@ h2{
 
 
 .destaque{
-    height: 100vh;
+    height: 90vh;
     background-size: cover;
     background-position: center;
     
@@ -63,6 +68,7 @@ h2{
 .destaque--nome{
     font-size: 60px;
     font-weight: bold;
+    color: #fff;
     
 }
 
@@ -82,10 +88,12 @@ h2{
 .destaque--ano{
     display: inline-block;
     margin-right: 15px;
+    color: rgb(182, 182, 182);
 }
 
 .destaque--temporadas{
     display: inline-block;
+    color: rgb(182, 182, 182);
 }
 
 .destaque--descricao{
@@ -112,6 +120,7 @@ h2{
 
 .btn--saibamais:hover{
     opacity: 0.7;
+    color: #fff;
 
 }
 

@@ -316,6 +316,7 @@ export const HiddenItemsContainer = styled.div`
 
     position: absolute;
     top: 100%;
+    z-index: 10;
 
     @media (max-width: 1100px) {
         

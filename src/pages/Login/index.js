@@ -20,8 +20,10 @@ function Login() {
    let users = JSON.parse(localStorage.getItem("pessoas")) || []
    let usuarioExistente= users.map(user=> {
       if (user.nomeUsuario == userName && user.senha == password){
-        navigation("/home")
 
+        localStorage.setItem("usuarioLogado",JSON.stringify(user))
+        
+        navigation("/home")
         return user;
       };
    })

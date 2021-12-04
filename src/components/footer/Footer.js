@@ -5,7 +5,7 @@ import '../style/styled.css'
 export default () =>{
     return(
         <footer>
-           <p> Feito pelo grupo 6 para o trabalho de conclusão da matéria ReactJs.  <strong> Yuri Weilemann da 100!!</strong> Tic/Serratec.</p>
+           <p style={{color: '#fff'}}> Feito pelo grupo 6 para o trabalho de conclusão da matéria Desenvolvimento Web.  <strong> Yuri Weilemann da 100!!</strong> Tic/Serratec.</p>
            <div className="container">
             <div className="footerlink1">
                 <ul>

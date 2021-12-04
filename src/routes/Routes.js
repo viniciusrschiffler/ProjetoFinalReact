@@ -16,7 +16,6 @@ function RoutesComponent() {
                 <Route path="/" element={<Login />} />
                 <Route path="/products/:type/:idFilme" element={<Products />} />
                 <Route path="/cart" element={<Cart />} />
-                <Route path="/nav" element={<Navbar />} />
                 <Route path="/movie-registration" element={<MovieRegistration />} />
                 <Route path="/cliente/cadastro" element={<CadastroCliente />} />
                 <Route path="/home" element={<Home />} />

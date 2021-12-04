@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { FiSearch, FiChevronDown, FiMenu } from 'react-icons/fi'
 import { useNavigate } from 'react-router-dom'
 import Swal from 'sweetalert2'
@@ -31,6 +31,15 @@ function Navbar() {
     const mavigation = useNavigate()
     const MySwal = withReactContent(Swal)
 
+    const [user, setUser] = useState({foto: ''})
+
+    useEffect(() => {
+        const loggedUser = JSON.parse(localStorage.getItem('usuarioLogado'))
+        setUser(loggedUser)
+    }, [])
+    
+   
+
     const [containerDisplay, setContainerDisplay] = useState(
         windowWith <= 1100 ? 'none' : 'flex'
     )
@@ -58,7 +67,7 @@ function Navbar() {
     function handleNotDoneYet(event) {
 
         function warning() {
-            Swal.fire({
+            MySwal.fire({
                 icon: 'warning',
                 title: 'Oops...',
                 text: 'Essa parte ainda não está pronta!',
@@ -115,6 +124,7 @@ function Navbar() {
                             (
                                 <>
                                     {renderGenresElement()}
+                                    <Link id="home" onClick={e => handleNavigate(e, '/movie-registration')} >Cadastrar Filme</Link>
                                     <Link id="home" onClick={e => handleNavigate(e, '/home')} >Inicio</Link>
                                 </>
                             )
@@ -122,6 +132,7 @@ function Navbar() {
                             (
                                 <>
                                     <Link id="home" onClick={e => handleNavigate(e, '/home')} >Inicio</Link>
+                                    <Link id="home" onClick={e => handleNavigate(e, '/movie-registration')} >Cadastrar Filme</Link>
                                     {renderGenresElement()}
                                 </>
 
@@ -138,7 +149,8 @@ function Navbar() {
                     <ProfileContainer>
 
                         <ProfileImageContainer>
-                            <ProfileImage src="https://avatars.githubusercontent.com/u/61471521?v=4" alt="Foto de perfil" />
+                            <ProfileImage src={user.foto} alt="Foto de perfil" />
+
                             {windowWith > 1100
                                 ? <FiChevronDown style={arrowDown} />
                                 : null}
