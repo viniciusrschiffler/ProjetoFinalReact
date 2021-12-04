@@ -19,7 +19,7 @@ function Login() {
 
    let users = JSON.parse(localStorage.getItem("pessoas")) || []
    let usuarioExistente= users.map(user=> {
-      if (user.nomeUsuario == userName && user.senha == password){
+      if (user.nomeUsuario === userName && user.senha === password){
 
         localStorage.setItem("usuarioLogado",JSON.stringify(user))
         
@@ -28,7 +28,7 @@ function Login() {
       };
    })
 
-    if(usuarioExistente[0]== undefined){
+    if(usuarioExistente[0] === undefined){
       MySwal.fire({
         icon: "error", 
         timer: 1500,

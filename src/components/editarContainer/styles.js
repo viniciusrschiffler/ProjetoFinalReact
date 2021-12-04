@@ -53,6 +53,7 @@ export const Button = styled.button`
     
 
     h2{
+        margin: 0;
         font-size: 20px;
         width: 90px;
         height: 40px;

@@ -157,7 +157,7 @@ function Navbar() {
                         </ProfileImageContainer>
 
                         <HiddenItemsContainer id="profile-hidden-items">
-                            <HiddenItems className='profileHiddenLink' to="/">Perfil</HiddenItems>
+                            <HiddenItems className='profileHiddenLink' onClick={e => handleNavigate(e, '/perfil')}>Perfil</HiddenItems>
                             <HiddenItems className='profileHiddenLink' onClick={e => handleNavigate(e, '/cart')}>Carrinho</HiddenItems>
                             <HiddenItems className='profileHiddenLink' id="sair" onClick={e => handleLogout(e)}>Sair</HiddenItems>
                         </HiddenItemsContainer>

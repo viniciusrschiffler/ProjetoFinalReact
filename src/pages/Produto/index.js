@@ -47,11 +47,11 @@ function Produto() {
                 console.error("Base de dados não encontrada" + err);
             });
 
-    }, []);
+    }, [params.type, params.idFilme]);
 
 
 
-    var calculo = produto?.runtime / produto?.vote_average;
+    var calculo = produto?.vote_average * 2.3;
 
     if (calculo < 1) {
         calculo = calculo + 5
@@ -87,10 +87,17 @@ function Produto() {
     }
 
     function handleAddInCart(preco, tipo) {
+        const title = {
+            title: produto.title
+        }
+
+        if (params.type === "tv") {
+            title.title = produto.title
+        }
 
         filmes.push({
             idFilme,
-            title: produto.title,
+            title: title.title ,
             preco,
             tipo
         })
@@ -112,7 +119,11 @@ function Produto() {
                 <ProdutoContainer>
                     <Foto src={"https://www.themoviedb.org/t/p/original/" + produto?.poster_path} />
                     <div>
-                        <Title>{produto?.title}</Title>
+                        {
+                            params.type === "movie"
+                            ? <Title>{produto?.title}</Title>
+                            : <Title>{produto?.name}</Title>
+                        }
                     </div>
                     <div>
                         <Button onClick={() => {

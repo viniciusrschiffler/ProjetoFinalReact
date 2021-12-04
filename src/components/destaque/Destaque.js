@@ -36,7 +36,7 @@ export default ({item}) =>{
                     </div>
                     <div className="destaque--descricao">{descricao}</div>
                     <div className="destaque--buttons">
-                        <a  onClick={e => handleNavigate(e)} hrf="#"className="btn--saibamais">+Saiba Mais</a>
+                        <a  onClick={e => handleNavigate(e)} hrf="#" className="btn--saibamais">+Saiba Mais</a>
                     </div>
                     <div className="destaque--genres">
                         <strong>Gêneros: </strong>{genres.join(', ')}

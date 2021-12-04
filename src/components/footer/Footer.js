@@ -10,13 +10,13 @@ export default () =>{
             <div className="footerlink1">
                 <ul>
                     <li>
-                        <a href="https://github.com/anaclarabull" target="_blank"><img src="https://img.icons8.com/nolan/64/github.png"/><span style={{paddingLeft:8, paddingRight: 15}}>Ana</span></a>
+                        <a href="https://github.com/anaclarabull" target="_blank" rel="noreferrer" ><img src="https://img.icons8.com/nolan/64/github.png"/><span style={{paddingLeft:8, paddingRight: 15}}>Ana</span></a>
                     </li>
                     <li>
-                        <a href="https://github.com/DaniCaovilla" target="_blank"><img src="https://img.icons8.com/nolan/64/github.png"/><span style={{paddingLeft:9, paddingRight: 12}}>Dani</span></a>
+                        <a href="https://github.com/DaniCaovilla" target="_blank" rel="noreferrer" ><img src="https://img.icons8.com/nolan/64/github.png"/><span style={{paddingLeft:9, paddingRight: 12}}>Dani</span></a>
                     </li>
                     <li>
-                        <a href="https://github.com/Natanalpe" target="_blank"><img src="https://img.icons8.com/nolan/64/github.png"/><span style={{paddingLeft:6, paddingRight: 5.5}}>Natan</span></a>
+                        <a href="https://github.com/Natanalpe" target="_blank" rel="noreferrer" ><img src="https://img.icons8.com/nolan/64/github.png"/><span style={{paddingLeft:6, paddingRight: 5.5}}>Natan</span></a>
                     </li>
                 </ul>
             </div>
@@ -24,13 +24,13 @@ export default () =>{
             <div className="footerlink2">
                 <ul>
                     <li>
-                        <a href="https://github.com/Paulo-BFR" target="_blank"><img src="https://img.icons8.com/nolan/64/github.png"/><span style={{paddingLeft:16, paddingRight: 9}}>Paulo</span></a>
+                        <a href="https://github.com/Paulo-BFR" target="_blank" rel="noreferrer" ><img src="https://img.icons8.com/nolan/64/github.png"/><span style={{paddingLeft:16, paddingRight: 9}}>Paulo</span></a>
                     </li>
                     <li>
-                        <a href="https://github.com/viniciusrschiffler" target="_blank"><img src="https://img.icons8.com/nolan/64/github.png"/><span style={{paddingLeft: 8}}>Vinicius</span></a>
+                        <a href="https://github.com/viniciusrschiffler" target="_blank" rel="noreferrer" ><img src="https://img.icons8.com/nolan/64/github.png"/><span style={{paddingLeft: 8}}>Vinicius</span></a>
                     </li>
                     <li>
-                        <a href="https://github.com/WillianMotta" target="_blank"><img src="https://img.icons8.com/nolan/64/github.png"/><span style={{paddingLeft: 12}}>Willian</span></a>
+                        <a href="https://github.com/WillianMotta" target="_blank" rel="noreferrer" ><img src="https://img.icons8.com/nolan/64/github.png"/><span style={{paddingLeft: 12}}>Willian</span></a>
                     </li>
                 </ul>
 

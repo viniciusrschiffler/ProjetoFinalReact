@@ -1,57 +1,57 @@
 import { Card, Row, Col, Form, FloatingLabel } from "react-bootstrap";
 import { Container, Divider } from "./styles";
-import {useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import Btn from "./../../components/LoginButton";
 
 function CadastroCliente() {
 
-  const navigation=useNavigate()
+  const navigation = useNavigate()
   function handleSubmit(event) {
     event.preventDefault();
-    let nomeCompleto=document.getElementById("nomeCompleto").value;
-    let cpf=document.getElementById("cpf").value;
-    let dataNascimento=document.getElementById("dataNascimento").value;
-    let telefone=document.getElementById("telefone").value;
-    let celular=document.getElementById("celular").value;
-    let foto=document.getElementById("foto").value;
-    let cep=document.getElementById("cep").value;
-    let rua=document.getElementById("nomeRua").value;
-    let numero=document.getElementById("numero").value;
-    let complemento=document.getElementById("complemento").value;
-    let bairro=document.getElementById("bairro").value;
-    let cidade=document.getElementById("cidade").value;
-    let estado=document.getElementById("estado").value;
-    let email=document.getElementById("email").value;
-    let userName=document.getElementById("userName").value;
-    let password=document.getElementById("password").value;
+    let nomeCompleto = document.getElementById("nomeCompleto").value;
+    let cpf = document.getElementById("cpf").value;
+    let dataNascimento = document.getElementById("dataNascimento").value;
+    let telefone = document.getElementById("telefone").value;
+    let celular = document.getElementById("celular").value;
+    let foto = document.getElementById("foto").value;
+    let cep = document.getElementById("cep").value;
+    let rua = document.getElementById("nomeRua").value;
+    let numero = document.getElementById("numero").value;
+    let complemento = document.getElementById("complemento").value;
+    let bairro = document.getElementById("bairro").value;
+    let cidade = document.getElementById("cidade").value;
+    let estado = document.getElementById("estado").value;
+    let email = document.getElementById("email").value;
+    let userName = document.getElementById("userName").value;
+    let password = document.getElementById("password").value;
 
-    let data = { 
+    let data = {
       nomeCompleto: nomeCompleto,
       cpf: cpf,
-      dataNascimento:dataNascimento,
+      dataNascimento: dataNascimento,
       telefone: telefone,
       celular: celular,
       foto: foto,
       nomeUsuario: userName,
       senha: password,
+      email: email,
 
       endereco: {
-          cep: cep,
-          rua: rua,
-          numero: numero,
-          complemento: complemento,
-          bairro: bairro,
-          cidade: cidade,
-          estado: estado,
-          email: email,
+        cep: cep,
+        rua: rua,
+        numero: numero,
+        complemento: complemento,
+        bairro: bairro,
+        cidade: cidade,
+        estado: estado,
       }
-     }
-     let users = JSON.parse(localStorage.getItem("pessoas")) || []
-     users.push(data)
-     localStorage.setItem("pessoas", JSON.stringify(users));
-     navigation("/")
     }
+    let users = JSON.parse(localStorage.getItem("pessoas")) || []
+    users.push(data)
+    localStorage.setItem("pessoas", JSON.stringify(users));
+    navigation("/")
+  }
 
   return (
     <Container>
@@ -102,7 +102,7 @@ function CadastroCliente() {
           <h2 className="mb-3 titulo">Endereço</h2>
           <Row>
             <Col md={6}>
-            <FloatingLabel controlId="cep" label="Cep" className="mb-3">
+              <FloatingLabel controlId="cep" label="Cep" className="mb-3">
                 <Form.Control type="text" id="cep" placeholder=" " />
               </FloatingLabel>
             </Col>
@@ -170,7 +170,7 @@ function CadastroCliente() {
             <Col md={6}>
             </Col>
             <Col md={6}>
-              <Btn title="Salvar" url=" " handleFunction={e =>{handleSubmit(e)}} ></Btn>
+              <Btn title="Salvar" url=" " handleFunction={e => { handleSubmit(e) }} ></Btn>
             </Col>
           </Row>
         </Card.Body>

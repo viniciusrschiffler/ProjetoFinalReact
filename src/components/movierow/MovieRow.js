@@ -37,7 +37,7 @@ export default ({title,itens, mediaType}) => {
         if (mediaType) {
             navigation(`/products/${mediaType}/${idFilme}`)
 
-        }else if (title == 'Séries') {
+        }else if (title === 'Séries') {
             navigation(`/products/tv/${idFilme}`)
             
         }else {

@@ -14,7 +14,7 @@ const Table = ({ movies }) => {
 
     useEffect(() => {
         setData(movies)
-    }, [])
+    }, [movies])
     
 
     function handleRemoveItem(id, type) {
@@ -23,7 +23,6 @@ const Table = ({ movies }) => {
         filmes = filmes.filter(filme => {
             if (filme.idFilme === id) {
                 if (filme.tipo === type) {
-                    return
                 }
             }
             return filme
@@ -32,9 +31,6 @@ const Table = ({ movies }) => {
         setData(filmes)
         localStorage.setItem('filmes', JSON.stringify(filmes))
     }
-
-
-    let counter = 0
 
     const Row = ({ filme }) => {
         const keys = Object.keys(filme)

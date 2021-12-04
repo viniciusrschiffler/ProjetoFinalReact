@@ -7,6 +7,7 @@ export const HeaderSection = styled.header`
     display: flex;
     flex-direction: column;
     padding: 0;
+    margin-top: 10vh;
 `
 
 export const HeaderTitle = styled.h1`

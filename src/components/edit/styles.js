@@ -8,7 +8,7 @@ export const Container = styled.div`
     align-items: center;
     flex-direction: column;
     position: relative;
-    bottom: 25%;
+    bottom: 0%;
 `
 
 export const EditInfo = styled.div`
